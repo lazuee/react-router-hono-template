@@ -88,5 +88,5 @@ export default defineConfig({
   semi: true,
   tabWidth: 2,
   printWidth: 160,
-  endOfLine: "lf",
+  endOfLine: "crlf",
 });
