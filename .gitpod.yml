@@ -1,0 +1,3 @@
+tasks:
+  - init: pnpm install && pnpm lint:fix
+    command: pnpm website:start

@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "shardulm94.trailing-spaces",
+    "editorconfig.editorconfig",
+    "stylelint.vscode-stylelint",
+    "bradlc.vscode-tailwindcss",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint"
+  ]
+}

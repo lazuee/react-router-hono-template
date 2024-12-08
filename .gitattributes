@@ -1,0 +1,68 @@
+# General Text Files
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.sass text eol=lf
+*.scss text eol=lf diff=css
+*.cnf text eol=lf
+*.conf text eol=lf
+*.config text eol=lf
+*.editorconfig text eol=lf
+.env text eol=lf
+.env.* text eol=lf
+.npmrc text eol=lf
+.gitattributes text eol=lf
+.gitconfig text eol=lf
+*.*ignore text eol=lf
+
+# JS/TS Files
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mts text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.cjs text eol=lf
+package.json text eol=lf
+package-lock.json text eol=lf -diff
+pnpm-lock.yaml text eol=lf -diff
+.prettierrc text eol=lf
+
+# Lock Files
+*.lock text eol=lf -diff
+
+# Image Files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.gif binary
+*.tiff binary
+*.webp binary
+
+# Audio/Video Files
+*.mp3 binary
+*.ogg binary
+*.mov binary
+*.mp4 binary
+*.swf binary
+*.webm binary
+*.avi binary
+
+# Archive Files
+*.7z binary
+*.rar binary
+*.tar binary
+*.zip binary
+
+# Font Files
+*.ttf binary
+*.eot binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# SVG File
+*.svg text eol=lf
