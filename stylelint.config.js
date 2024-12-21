@@ -19,6 +19,7 @@ export default defineConfig({
   ],
   rules: {
     "no-descending-specificity": null,
+    "selector-class-pattern": null,
     "order/order": [
       {
         name: "apply",
@@ -61,6 +62,5 @@ export default defineConfig({
         ],
       },
     ],
-    "selector-class-pattern": null,
   },
 });
