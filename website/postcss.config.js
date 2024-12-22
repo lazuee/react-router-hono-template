@@ -1,4 +1,5 @@
-// eslint-disable-next-line jsdoc/no-types
+//@ts-check
+
 /** @param {import("postcss-load-config").Config} config */
 function defineConfig(config) {
   return config;

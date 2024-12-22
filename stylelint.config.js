@@ -1,6 +1,13 @@
 //@ts-check
 
-/** @param config */
+/**
+ * @param {Omit<import("stylelint").Config, "rules"> &
+ * { rules?: Partial<import("stylelint-config-clean-order")["rules"]> } &
+ * { rules?: Partial<import("stylelint-config-standard-scss")["rules"]> } &
+ * { rules?: Partial<import("stylelint-config-tailwindcss")["rules"]> } &
+ * { rules?: Partial<{ [K in keyof typeof import("stylelint")["default"]["rules"] as `${string & K}`]: any }>} &
+ * { rules?: Partial<{ [K in keyof typeof import("./node_modules/stylelint-scss/src/rules") as `scss/${string & K}`]: any }>}} config
+ */
 function defineConfig(config) {
   return config;
 }
@@ -8,7 +15,7 @@ function defineConfig(config) {
 export default defineConfig({
   extends: [
     "stylelint-config-standard-scss",
-    "stylelint-config-tailwindcss/scss",
+    "stylelint-config-tailwindcss",
     "stylelint-config-clean-order",
   ],
   overrides: [
@@ -19,33 +26,7 @@ export default defineConfig({
   ],
   rules: {
     "no-descending-specificity": null,
-    "order/order": [
-      {
-        name: "apply",
-        type: "at-rule",
-      },
-      "declarations",
-      {
-        name: "media",
-        type: "at-rule",
-      },
-      {
-        selector: "^&::(before|after)",
-        type: "rule",
-      },
-      {
-        selector: "^&:\\w",
-        type: "rule",
-      },
-      {
-        selector: "^&_",
-        type: "rule",
-      },
-      {
-        selector: "^.",
-        type: "rule",
-      },
-    ],
+    "selector-class-pattern": null,
     "scss/at-rule-no-unknown": [
       true,
       {
@@ -61,6 +42,5 @@ export default defineConfig({
         ],
       },
     ],
-    "selector-class-pattern": null,
   },
 });

@@ -1,4 +1,3 @@
-// eslint-disable-next-line jsdoc/no-types
 /** @param {import("tailwindcss").Config} config */
 function defineConfig(config) {
   return config;
