@@ -2,8 +2,9 @@
 import { env } from "node:process";
 
 import { reactRouterHono } from "@lazuee/react-router-hono";
-
 import { reactRouter } from "@react-router/dev/vite";
+
+import tailwindcss from "@tailwindcss/vite";
 
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -20,18 +21,12 @@ export default defineConfig({
       output: { minifyInternalExports: true },
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        silenceDeprecations: ["legacy-js-api"],
-      },
-    },
-  },
   esbuild: {
     format: "esm",
     mangleCache: {},
   },
   plugins: [
+    tailwindcss(),
     reactRouterHono({
       serverFile: "src/server/index.ts",
     }),

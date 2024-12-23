@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 html,
 body {
   overflow-x: hidden;
@@ -6,4 +8,6 @@ body {
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
   text-rendering: optimizelegibility !important;
+
+  @apply h-full bg-zinc-100 font-sans text-black dark:bg-zinc-950 dark:text-zinc-100;
 }

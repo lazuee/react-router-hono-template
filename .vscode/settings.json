@@ -38,6 +38,9 @@
     "source.organizeImports": "never",
     "source.sortImports": "never"
   },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
 
   "eslint.enable": true,
   "eslint.useFlatConfig": true,
@@ -75,7 +78,7 @@
   "stylelint.enable": true,
   "stylelint.configFile": "stylelint.config.js",
   "stylelint.packageManager": "pnpm",
-  "stylelint.validate": ["css", "scss"],
+  "stylelint.validate": ["css"],
   "[scss][css][tailwindcss]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint",
     "editor.codeActionsOnSave": {

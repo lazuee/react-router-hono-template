@@ -11,9 +11,10 @@
       "~/*": ["src/*"]
     },
     "rootDirs": [".", "./.react-router/types"],
-    "types": ["vite/client"],
+    "types": ["@react-router/node", "vite/client"],
 
     "resolveJsonModule": true,
+    "allowJs": true,
     "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,

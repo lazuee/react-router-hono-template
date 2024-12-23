@@ -8,7 +8,7 @@ import { ErrorLayout } from "./components/layout/error";
 import { RootLayout } from "./components/layout/root";
 import { getTheme } from "./theme/route";
 
-import.meta.glob("./styles/**/**/*.scss", { eager: true });
+import.meta.glob("./styles/**/**/*.css", { eager: true });
 
 export function shouldRevalidate({
   formData,
