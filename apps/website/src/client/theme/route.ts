@@ -1,6 +1,6 @@
 import { createCookie, redirect, type ActionFunctionArgs } from "react-router";
 
-import { safeRedirect } from "~/lib/utils";
+import { safeRedirect } from "~/client/lib/util";
 import { isValidTheme, Theme } from ".";
 
 const themeCookie = createCookie("theme", {

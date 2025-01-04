@@ -1,4 +1,3 @@
-//@ts-check
 import { env } from "node:process";
 
 import { reactRouterHono } from "@lazuee/react-router-hono";
@@ -16,7 +15,6 @@ export default defineConfig({
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 1024,
     copyPublicDir: false,
-    minify: "esbuild",
     rollupOptions: {
       output: { minifyInternalExports: true },
     },
@@ -34,7 +32,6 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   server: {
-    open: false,
     port,
   },
 });

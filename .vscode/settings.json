@@ -1,33 +1,27 @@
 {
   "explorer.sortOrder": "type",
-  // "explorer.excludeGitIgnore": true,
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-workspace.yaml, pnpm-lock.yaml"
   },
-
   "npm.packageManager": "pnpm",
   "search.exclude": {
     "pnpm-lock.yaml": true
   },
-
   "typescript.tsdk": "node_modules/typescript/lib",
   "javascript.preferences.importModuleSpecifier": "project-relative",
   "typescript.preferences.importModuleSpecifier": "project-relative",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsc.autoDetect": "off",
-
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false,
   "scss.lint.unknownAtRules": "ignore",
   "css.lint.unknownAtRules": "ignore",
-
   "files.eol": "\n",
   "files.autoGuessEncoding": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
-
   "prettier.enable": false,
   "editor.formatOnSave": false,
   "editor.formatOnPaste": false,
@@ -41,7 +35,6 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-
   "eslint.enable": true,
   "eslint.useFlatConfig": true,
   "eslint.options": {
@@ -66,7 +59,6 @@
     "javascriptreact",
     "typescriptreact"
   ],
-
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript",
     "typescriptreact": "javascript"
@@ -74,7 +66,6 @@
   "tailwindCSS.experimental.classRegex": [
     ["(?:cn)\\(([^\\);]*)[\\);]", "[`'\"]([^'\"`,;]*)[`'\"]"]
   ],
-
   "stylelint.enable": true,
   "stylelint.configFile": "stylelint.config.js",
   "stylelint.packageManager": "pnpm",
@@ -84,5 +75,10 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": "always"
     }
+  },
+  "workbench.editor.customLabels.patterns": {
+    "**/client/**/*": "${dirname}/${filename} [client]",
+    "**/client/**/*.server.*": "${dirname}/${filename} [server]",
+    "**/server/**/*": "${dirname}/${filename} [server]"
   }
 }

@@ -1,14 +1,11 @@
-import {
-  Outlet,
-  type LoaderFunctionArgs,
-  type ShouldRevalidateFunctionArgs,
-} from "react-router";
+import "./styles/tailwind.css";
 
+import { Outlet, type ShouldRevalidateFunctionArgs } from "react-router";
+import { type Route } from "./+types/root";
 import { ErrorLayout } from "./components/layout/error";
+
 import { RootLayout } from "./components/layout/root";
 import { getTheme } from "./theme/route";
-
-import.meta.glob("./styles/**/**/*.css", { eager: true });
 
 export function shouldRevalidate({
   formData,
@@ -17,13 +14,10 @@ export function shouldRevalidate({
   return formData?.get("theme") ? true : defaultShouldRevalidate;
 }
 
-export async function loader({ context, request }: LoaderFunctionArgs) {
-  const { clientIp, env } = context;
+export async function loader({ request }: Route.ClientLoaderArgs) {
   const theme = await getTheme(request);
 
   return {
-    clientIp,
-    env,
     theme,
   };
 }
@@ -42,8 +36,4 @@ export function ErrorBoundary() {
       <ErrorLayout />
     </RootLayout>
   );
-}
-
-export function HydrateFallback() {
-  return <h1>Loading...</h1>;
 }

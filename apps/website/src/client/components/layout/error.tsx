@@ -1,6 +1,6 @@
 import { isRouteErrorResponse, useRouteError } from "react-router";
 
-import { canUseDOM } from "~/lib/utils";
+import { canUseDOM } from "~/client/lib/util";
 
 export function ErrorLayout() {
   const parsed = parsedError();

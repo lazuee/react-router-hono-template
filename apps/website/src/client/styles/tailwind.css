@@ -6,3 +6,15 @@
   --font-sans: -apple-system, blinkmacsystemfont, "Segoe UI", "Noto Sans", helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: ui-monospace, sfmono-regular, sf mono, menlo, consolas, liberation mono, monospace;
 }
+
+html,
+body {
+  overflow-x: hidden;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  text-rendering: optimizelegibility !important;
+
+  @apply h-full bg-zinc-100 font-sans text-black dark:bg-zinc-950 dark:text-zinc-100;
+}

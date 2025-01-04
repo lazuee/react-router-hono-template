@@ -1,31 +1,31 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.15.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "lint": "pnpm eslint && pnpm stylelint",
     "lint:fix": "pnpm eslint:fix && pnpm stylelint:fix",
-    "preinstall": "npx only-allow pnpm",
-    "stylelint": "stylelint --ignore-path .gitignore \"website/**/*.{css,scss}\"",
-    "stylelint:fix": "stylelint --ignore-path .gitignore \"website/src/client/styles/**/**/*.{css,scss}\"",
+    "stylelint": "stylelint --ignore-path .gitignore \"{apps,packages}/**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint --ignore-path .gitignore \"{apps,packages}/**/*.{css,scss}\"",
     "website:build": "pnpm --filter website... run build",
     "website:dev": "pnpm --filter website run dev",
     "website:start": "pnpm website:build && pnpm --filter website run start"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "3.10.1",
-    "@types/node": "22.10.2",
+    "@ntnyq/eslint-config": "3.11.0",
     "cross-env": "7.0.3",
     "eslint": "9.17.0",
     "stylelint": "16.12.0",
     "stylelint-config-clean-order": "6.1.0",
+    "stylelint-config-standard-scss": "14.0.0",
     "stylelint-config-tailwindcss": "0.0.7",
+    "stylelint-scss": "6.10.0",
     "typescript": "5.7.2"
-  },
-  "engines": {
-    "node": ">=20"
   },
   "pnpm": {
     "overrides": {

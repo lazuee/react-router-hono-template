@@ -2,7 +2,7 @@ import { type ReactRouterHono } from "@lazuee/react-router-hono";
 import { compress } from "hono/compress";
 
 import { prettyJSON } from "hono/pretty-json";
-import * as env from "~/lib/env";
+import * as env from "~/env.server";
 import { clientIp } from "./middleware/clientIp";
 import routes from "./routes";
 
@@ -28,15 +28,6 @@ const reactRouterHono: ReactRouterHono = {
   server(app) {
     app.use(
       "*",
-      async (c, next) => {
-        c.header("Access-Control-Allow-Origin", "*");
-        c.header(
-          "Access-Control-Allow-Methods",
-          "GET, POST, PUT, DELETE, OPTIONS",
-        );
-        c.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-        return next();
-      },
       compress({ encoding: "gzip" }),
       prettyJSON({ space: 4 }),
       clientIp(),

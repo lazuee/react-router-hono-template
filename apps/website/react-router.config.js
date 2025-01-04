@@ -1,4 +1,3 @@
-//@ts-check
 import { nodePreset, vercelPreset } from "@lazuee/react-router-hono";
 
 /** @param {import("@react-router/dev/config").Config} config */

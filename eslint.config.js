@@ -2,6 +2,11 @@
 import { defineESLintConfig } from "@ntnyq/eslint-config";
 
 export default defineESLintConfig({
+  depend: {
+    overrides: {
+      "depend/ban-dependencies": ["off", { modules: ["execa"] }],
+    },
+  },
   jsdoc: {
     overrides: {
       "jsdoc/no-types": "off",
@@ -16,7 +21,7 @@ export default defineESLintConfig({
       "vars-on-top": "off",
     },
     parserOptions: {
-      project: ["website/tsconfig.json", "packages/*/tsconfig.json"],
+      project: ["apps/*/tsconfig.json", "packages/*/tsconfig.json"],
     },
   },
   yml: {
