@@ -14,7 +14,7 @@ export function shouldRevalidate({
   return formData?.get("theme") ? true : defaultShouldRevalidate;
 }
 
-export async function loader({ request }: Route.ClientLoaderArgs) {
+export async function loader({ request }: Route.LoaderArgs) {
   const theme = await getTheme(request);
 
   return {
