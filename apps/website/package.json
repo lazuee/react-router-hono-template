@@ -9,31 +9,28 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@react-router/node": "pre",
-    "hono": "4.6.16",
-    "is-ip": "5.0.1",
-    "isbot": "5.1.21",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "react-router": "pre",
-    "usehooks-ts": "3.1.0"
+    "@react-router/node": "^7.1.5",
+    "hono": "^4.6.20",
+    "is-ip": "^5.0.1",
+    "isbot": "^5.1.22",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.1",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
-    "@lazuee/react-router-hono": "1.0.9",
-    "@react-router/dev": "pre",
-    "@tailwindcss/vite": "4.0.0-beta.9",
-    "@types/node": "22.10.5",
-    "@types/react": "19.0.4",
-    "@types/react-dom": "19.0.2",
-    "clsx": "2.1.1",
-    "cross-env": "7.0.3",
-    "tailwind-merge": "2.6.0",
-    "tailwindcss": "4.0.0-beta.9",
-    "typescript": "5.7.3",
-    "vite": "6.0.7",
-    "vite-tsconfig-paths": "5.1.4"
-  },
-  "engines": {
-    "node": ">=20"
+    "@lazuee/react-router-hono": "^1.1.1",
+    "@react-router/dev": "^7.1.5",
+    "@tailwindcss/vite": "^4.0.3",
+    "@types/node": "22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "clsx": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

@@ -1,3 +1,2 @@
 tasks:
-  - init: pnpm install && pnpm lint:fix
-    command: pnpm website:start
+  - before: curl -fsSL https://bun.sh/install | bash && source /home/gitpod/.bashrc && bun --version

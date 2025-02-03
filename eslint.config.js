@@ -2,6 +2,7 @@
 import { defineESLintConfig } from "@ntnyq/eslint-config";
 
 export default defineESLintConfig({
+  ignores: ["**/README.md/*.ts"],
   jsdoc: {
     overrides: {
       "jsdoc/no-types": "off",

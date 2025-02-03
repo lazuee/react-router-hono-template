@@ -14,7 +14,6 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0,
     chunkSizeWarningLimit: 1024,
-    copyPublicDir: false,
     rollupOptions: {
       output: { minifyInternalExports: true },
     },
