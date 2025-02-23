@@ -1,3 +1,5 @@
+//@ts-check
+
 /** @param {import("@react-router/dev/config").Config} config */
 function defineConfig(config) {
   return config;

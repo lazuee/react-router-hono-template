@@ -1,3 +1,4 @@
+//@ts-check
 import { env } from "node:process";
 
 import { reactRouterHono } from "@lazuee/react-router-hono";
