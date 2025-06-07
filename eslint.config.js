@@ -15,6 +15,12 @@ export default defineESLintConfig({
       "jsdoc/no-types": "off",
     },
   },
+  pnpm: {
+    overridesJsonRules: {
+      "pnpm/json-enforce-catalog": "off",
+      "pnpm/json-prefer-workspace-settings": "off",
+    },
+  },
   typescript: {
     overrides: {
       "@typescript-eslint/no-use-before-define": "off",

@@ -1,6 +1,6 @@
 import { useNavigation, useRouteLoaderData } from "react-router";
 
-import { type Info } from "../+types/root";
+import { type Route } from "../+types/root";
 
 export enum Theme {
   LIGHT = "light",
@@ -12,7 +12,8 @@ export const isValidTheme = (theme: any): theme is Theme =>
 
 export const useTheme = (): Theme => {
   let theme = useNavigation().formData?.get("theme");
-  theme ||= useRouteLoaderData<Info["loaderData"]>("root")?.theme;
+  theme ||=
+    useRouteLoaderData<Route.ComponentProps["loaderData"]>("root")?.theme;
 
   return isValidTheme(theme) ? theme : Theme.DARK;
 };

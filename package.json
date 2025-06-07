@@ -6,24 +6,22 @@
     "packages/*"
   ],
   "scripts": {
-    "eslint": "eslint .",
-    "eslint:fix": "eslint . --fix",
-    "lint": "pnpm eslint && pnpm stylelint",
-    "lint:fix": "pnpm eslint:fix && pnpm stylelint:fix",
-    "stylelint": "stylelint --ignore-path .gitignore \"{apps,packages}/**/*.{css,scss}\"",
-    "stylelint:fix": "stylelint --ignore-path .gitignore \"{apps,packages}/**/*.{css,scss}\"",
-    "website:build": "pnpm --stream --filter website... run build",
-    "website:dev": "pnpm --stream --filter website run dev",
-    "website:start": "pnpm website:build && pnpm --stream --filter website run start",
-    "website:vercel": "cross-env VERCEL=1 pnpm run website:build"
+    "build": "pnpm run build:package && pnpm run build:app",
+    "build:app": "pnpm run -r  --stream --if-present --parallel --filter {apps/**} --workspace-concurrency=Infinity /^build.*/",
+    "build:package": "pnpm run -r  --stream --if-present --parallel --filter {packages/**} --workspace-concurrency=Infinity /^build.*/",
+    "dev": "pnpm run -r  --stream --if-present --parallel --filter {apps/website} --workspace-concurrency=Infinity /^dev.*/",
+    "lint": "pnpm run --stream --if-present /^lint:.*/",
+    "lint:eslint": "eslint . --fix",
+    "lint:stylelint": "stylelint --ignore-path .gitignore \"{apps,packages}/**/*.{css,scss}\"",
+    "start": "pnpm run -r  --stream --if-present --parallel --filter {apps/website} --workspace-concurrency=Infinity /^start.*/"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.12.3",
+    "@ntnyq/eslint-config": "^4.3.0",
     "cross-env": "^7.0.3",
-    "eslint": "^9.26.0",
-    "stylelint": "^16.19.1",
+    "eslint": "^9.28.0",
+    "stylelint": "^16.20.0",
     "stylelint-config-clean-order": "^7.0.0",
-    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-config-tailwindcss": "^1.0.0",
     "stylelint-scss": "^6.12.0"
   },
@@ -33,6 +31,8 @@
       "react-dom": "^19.1.0"
     },
     "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
       "unrs-resolver"
     ]
   }
