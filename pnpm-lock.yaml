@@ -42,6 +42,9 @@ importers:
 
   apps/website:
     dependencies:
+      '@hono/node-server':
+        specifier: ^1.19.7
+        version: 1.19.7(hono@4.10.8)
       '@lazuee/react-router-hono':
         specifier: ^1.2.5
         version: 1.2.5(@hono/node-server@1.19.7(hono@4.10.8))(@hono/vite-dev-server@0.23.0(hono@4.10.8))(hono@4.10.8)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(rollup@4.53.3)(vite@7.2.7(@types/node@22.13.0)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))
