@@ -43,8 +43,8 @@ importers:
   apps/website:
     dependencies:
       '@lazuee/react-router-hono':
-        specifier: ^1.2.2
-        version: 1.2.2(@hono/node-server@1.19.7(hono@4.10.8))(@hono/vite-dev-server@0.23.0(hono@4.10.8))(hono@4.10.8)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(rollup@4.53.3)(vite@7.2.7(@types/node@22.13.0)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))
+        specifier: ^1.2.3
+        version: 1.2.3(@hono/node-server@1.19.7(hono@4.10.8))(@hono/vite-dev-server@0.23.0(hono@4.10.8))(hono@4.10.8)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(rollup@4.53.3)(vite@7.2.7(@types/node@22.13.0)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))
       '@react-router/node':
         specifier: ^7.10.1
         version: 7.10.1(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
@@ -592,8 +592,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@lazuee/react-router-hono@1.2.2':
-    resolution: {integrity: sha512-WhuOMahFzUBp/YG5kmwIO8PXODmZH/FEUARRVcPKICn2uhORAA4l56GcNyhXtkP8S6fBu8+BYSkpTGGayKY3zw==}
+  '@lazuee/react-router-hono@1.2.3':
+    resolution: {integrity: sha512-+m/xDRPJlCP3Dbpak7nFZ5MSmxIhqEoo4p9/q1qSO1n/pA/iPbnqXYpnzTJwzHEgn/3W+ISw/IM6gnCQEnPZKQ==}
     peerDependencies:
       '@hono/node-server': ^1.19.7
       '@hono/vite-dev-server': ^0.23.0
@@ -3557,7 +3557,7 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lazuee/react-router-hono@1.2.2(@hono/node-server@1.19.7(hono@4.10.8))(@hono/vite-dev-server@0.23.0(hono@4.10.8))(hono@4.10.8)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(rollup@4.53.3)(vite@7.2.7(@types/node@22.13.0)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))':
+  '@lazuee/react-router-hono@1.2.3(@hono/node-server@1.19.7(hono@4.10.8))(@hono/vite-dev-server@0.23.0(hono@4.10.8))(hono@4.10.8)(react-router@7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(rollup@4.53.3)(vite@7.2.7(@types/node@22.13.0)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.2))':
     dependencies:
       '@hono/node-server': 1.19.7(hono@4.10.8)
       '@hono/vite-dev-server': 0.23.0(hono@4.10.8)
