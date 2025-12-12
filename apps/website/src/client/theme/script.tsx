@@ -1,6 +1,6 @@
 import { useIsomorphicLayoutEffect } from "usehooks-ts";
 
-import { type Theme } from "./";
+import type { Theme } from "./";
 
 export const ThemeScript = ({ theme }: { theme: Theme }) => {
   useIsomorphicLayoutEffect(() => {

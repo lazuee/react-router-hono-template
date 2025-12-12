@@ -1,8 +1,9 @@
-import { clsx, type ClassValue } from "clsx";
-
+import { clsx } from "clsx";
 import { useState } from "react";
+
 import { twMerge } from "tailwind-merge";
 import { useIsomorphicLayoutEffect } from "usehooks-ts";
+import type { ClassValue } from "clsx";
 
 export function canUseDOM() {
   const [isClient, setIsClient] = useState(false);

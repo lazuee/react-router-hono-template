@@ -1,3 +1,15 @@
 packages:
-  - "packages/*"
   - "apps/*"
+  - "packages/*"
+
+linkWorkspacePackages: true
+
+packageManagerStrict: false
+
+preferWorkspacePackages: true
+
+saveWorkspaceProtocol: false
+
+shamefullyHoist: true
+
+strictPeerDependencies: true

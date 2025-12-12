@@ -1,11 +1,12 @@
 import "./styles/tailwind.css";
 
-import { Outlet, type ShouldRevalidateFunctionArgs } from "react-router";
-import { type Route } from "./+types/root";
+import { Outlet } from "react-router";
 import { ErrorLayout } from "./components/layout/error";
-
 import { RootLayout } from "./components/layout/root";
 import { getTheme } from "./theme/route";
+
+import type { ShouldRevalidateFunctionArgs } from "react-router";
+import type { Route } from "./+types/root";
 
 export function shouldRevalidate({
   formData,

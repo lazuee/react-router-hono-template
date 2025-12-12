@@ -11,10 +11,11 @@ html,
 body {
   overflow-x: hidden;
 
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
   text-rendering: optimizelegibility !important;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
   @apply h-full bg-zinc-100 font-sans text-black dark:bg-zinc-950 dark:text-zinc-100;
 }

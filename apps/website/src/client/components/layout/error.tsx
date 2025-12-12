@@ -4,7 +4,9 @@ import { canUseDOM } from "~/client/lib/util";
 
 export function ErrorLayout() {
   const parsed = parsedError();
-  if (!parsed.isClient) return null;
+  if (!parsed.isClient) {
+    return null;
+  }
 
   const errorMessage = parsed.isRouteError
     ? `${parsed.error.status} - ${parsed.error.data || parsed.error.statusText}`

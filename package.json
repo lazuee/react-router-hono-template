@@ -11,27 +11,27 @@
     "build:package": "pnpm run -r  --stream --if-present --parallel --filter {packages/**} --workspace-concurrency=Infinity /^build.*/",
     "dev": "pnpm run -r  --stream --if-present --parallel --filter {apps/website} --workspace-concurrency=Infinity /^dev.*/",
     "lint": "pnpm run --stream --if-present /^lint:.*/",
-    "lint:eslint": "eslint . --fix",
+    "lint:eslint": "eslint .",
     "lint:stylelint": "stylelint --ignore-path .gitignore \"{apps,packages}/**/*.{css,scss}\"",
     "start": "pnpm run -r  --stream --if-present --parallel --filter {apps/website} --workspace-concurrency=Infinity /^start.*/"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^4.3.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^9.28.0",
-    "stylelint": "^16.20.0",
-    "stylelint-config-clean-order": "^7.0.0",
-    "stylelint-config-standard-scss": "^15.0.1",
+    "@ntnyq/eslint-config": "^5.8.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-pnpm": "^1.4.2",
+    "stylelint": "^16.26.1",
+    "stylelint-config-clean-order": "^8.0.0",
+    "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-config-tailwindcss": "^1.0.0",
-    "stylelint-scss": "^6.12.0"
+    "stylelint-scss": "^6.13.0"
   },
   "pnpm": {
     "overrides": {
-      "react": "^19.1.0",
-      "react-dom": "^19.1.0"
+      "react": "^19.1.4",
+      "react-dom": "^19.1.4"
     },
     "onlyBuiltDependencies": [
-      "@tailwindcss/oxide",
       "esbuild",
       "unrs-resolver"
     ]

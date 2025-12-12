@@ -1,7 +1,8 @@
-import { createCookie, redirect, type ActionFunctionArgs } from "react-router";
-
+import { createCookie, redirect } from "react-router";
 import { safeRedirect } from "~/client/lib/util";
+
 import { isValidTheme, Theme } from ".";
+import type { ActionFunctionArgs } from "react-router";
 
 const themeCookie = createCookie("theme", {
   maxAge: 60 * 60 * 24 * 365,
@@ -18,7 +19,9 @@ export const getTheme = async (request: Request) => {
 export const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
   const theme = formData.get("theme");
-  if (!isValidTheme(theme)) throw new Response("Bad Request", { status: 400 });
+  if (!isValidTheme(theme)) {
+    throw new Response("Bad Request", { status: 400 });
+  }
 
   return redirect(safeRedirect(formData.get("redirect")), {
     headers: {

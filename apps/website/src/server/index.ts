@@ -1,9 +1,9 @@
-import { type ReactRouterHono } from "@lazuee/react-router-hono";
-
 import { prettyJSON } from "hono/pretty-json";
+
 import * as env from "~/env.server";
 import { clientIp } from "./middleware/clientIp";
 import routes from "./routes";
+import type { ReactRouterHono } from "@lazuee/react-router-hono";
 
 declare module "react-router" {
   export interface AppLoadContext {

@@ -2,7 +2,7 @@
 
 /**
  * @param {Omit<import("stylelint").Config, "rules"> &
- * { rules?: Partial<import("stylelint-config-clean-order")["rules"]> } &
+ * { rules?: Partial<import("stylelint-config-clean-order")["default"]["rules"]> } &
  * { rules?: Partial<import("stylelint-config-tailwindcss")["rules"]> } &
  * { rules?: Partial<{ [K in keyof typeof import("stylelint")["default"]["rules"] as `${string & K}`]: any }>}} config
  */

@@ -1,7 +1,7 @@
-import { type Env } from "hono";
-
 import { createMiddleware } from "hono/factory";
+
 import { isIP } from "is-ip";
+import type { Env } from "hono";
 
 declare module "hono" {
   interface ContextVariableMap {
@@ -26,8 +26,12 @@ export function clientIp<E extends Env = Env>() {
     const ipAddress = headerNames
       .flatMap((headerName) => {
         const value = ctx.req.header(headerName);
-        if (!value) return [];
-        if (headerName === "Forwarded") return parseForwardedHeader(value);
+        if (!value) {
+          return [];
+        }
+        if (headerName === "Forwarded") {
+          return parseForwardedHeader(value);
+        }
         return value.includes(",")
           ? value.split(",").map((ip) => ip.trim())
           : [value];
